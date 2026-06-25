@@ -28,7 +28,19 @@ namespace CarInfoSystem
         // METOT — arabanın yapabilecekleri
         public void Start()
         {
-            Console.WriteLine($"{_brand} çalıştı.");
+            try
+            {
+                if (string.IsNullOrWhiteSpace(_brand))
+
+                    throw new Exception("Marka bilgisi boş olamaz."); //throw çalışınca hemen catch'e atlar, altındaki hiçbir satır çalışmaz.
+
+                Console.WriteLine($"{_brand} çalıştı."); //if'e girmezse burası çalışır,catch'e  gitmez.
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Hata: {ex.Message}");
+            }
+
         }
 
         public void Stop()

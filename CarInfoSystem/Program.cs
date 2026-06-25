@@ -14,16 +14,15 @@ car2.Color = "Beyaz";
 car2.Start();
 car2.Stop();
 
+Car car3 = new Car();
+car3.Start();
+
 Motorcycle motorcycle1 = new Motorcycle();
 motorcycle1.Brand = "Honda";
 
 motorcycle1.Start();
 motorcycle1.Stop();
 
-//IVehicle vehicle1 = new Car();
-//vehicle1.Brand = "Toyota"; // HATA verecek
-//vehicle1.Start();
-//vehicle1.Stop();
 
 IVehicle vehicle1 = new Car();
 vehicle1.Start();
